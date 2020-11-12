@@ -1,0 +1,95 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://employees-api.vercel.app/api/employees/3f949e89-4d40-48fb-b43c-da20e7c768aa
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - employees-api.vercel.app
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - public, max-age=0, must-revalidate
+      Content-Length:
+      - '168'
+      Date:
+      - Thu, 12 Nov 2020 07:43:16 GMT
+      Etag:
+      - W/"a8-wfXdQXn7D6XCbhgYSVJvGVNvhYw"
+      X-Vercel-Cache:
+      - MISS
+      Age:
+      - '0'
+      Server:
+      - Vercel
+      X-Vercel-Id:
+      - lhr1::sfo1::49crs-1605166996640-283ef94c663c
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains; preload
+    body:
+      encoding: UTF-8
+      string: '{"id":"3f949e89-4d40-48fb-b43c-da20e7c768aa","first_name":"Freemon","last_name":"Courage","email":"freemon.courage@acme.com","department":"marketing","role":"employee"}'
+  recorded_at: Thu, 12 Nov 2020 07:43:17 GMT
+- request:
+    method: get
+    uri: https://employees-api.vercel.app/api/employees/random_emp_id
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - employees-api.vercel.app
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - public, max-age=0, must-revalidate
+      Content-Length:
+      - '69'
+      Date:
+      - Thu, 12 Nov 2020 07:43:51 GMT
+      Etag:
+      - W/"45-T5p/PVtDbyNw5liJ+I6peVuFCEo"
+      X-Vercel-Cache:
+      - MISS
+      Age:
+      - '0'
+      Server:
+      - Vercel
+      X-Vercel-Id:
+      - lhr1::sfo1::kmwpl-1605167031732-96c8d85bb0c7
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains; preload
+    body:
+      encoding: UTF-8
+      string: '{"detail":"Employee does not exist","status":404,"title":"Not Found"}'
+  recorded_at: Thu, 12 Nov 2020 07:43:52 GMT
+recorded_with: VCR 6.0.0
