@@ -32,6 +32,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 group :development, :test do
   gem 'pry-byebug'
   gem 'rspec-rails'
+  gem 'dotenv-rails'
 end
 
 group :development do
@@ -43,6 +44,11 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'rubocop', require: false
   gem 'shoulda-matchers', '~> 4.0'
+end
+
+group :test do
+  gem 'vcr', '~> 6.0'
+  gem 'webmock', '~> 3.9', '>= 3.9.2'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
