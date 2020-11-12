@@ -1,4 +1,4 @@
-require "rails_helper"
+require 'rails_helper'
 
 class Validatable
   include ActiveModel::Validations
@@ -15,17 +15,17 @@ RSpec.describe OwnerIsManagerValidator do
   end
 
   describe '#validate' do
-    context "Owner is not a manager" do
-      it "raises appropriate error" do
+    context 'Owner is not a manager' do
+      it 'raises appropriate error' do
         allow(@employee_service).to receive(:role).with(subject.owner_id) { 'employee' }
 
         subject.validate
-        expect(subject.errors.full_messages).to eq(["Owner is not manager This record is invalid"])
+        expect(subject.errors.full_messages).to eq(['Owner is not manager This record is invalid'])
       end
     end
 
-    context "Owner is a manager" do
-      it "returns true" do
+    context 'Owner is a manager' do
+      it 'returns true' do
         allow(@employee_service).to receive(:role).with(subject.owner_id) { 'manager' }
 
         expect(subject.validate).to be true

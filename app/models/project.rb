@@ -1,5 +1,5 @@
 class Project < ApplicationRecord
-  enum status: %i(planned active done failed), _prefix: true
+  enum status: %i[planned active done failed], _prefix: true
 
   validates :name, presence: true, uniqueness: true
   validates :owner_id, presence: true

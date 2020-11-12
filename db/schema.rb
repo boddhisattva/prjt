@@ -10,20 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_11_132826) do
-
+ActiveRecord::Schema.define(version: 20_201_111_132_826) do
   # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
+  enable_extension 'plpgsql'
 
-  create_table "projects", force: :cascade do |t|
-    t.string "name"
-    t.uuid "owner_id"
-    t.integer "status", default: 0
-    t.float "progress", default: 0.0
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["name"], name: "index_projects_on_name", unique: true
-    t.index ["owner_id"], name: "index_projects_on_owner_id"
+  create_table 'projects', force: :cascade do |t|
+    t.string 'name'
+    t.uuid 'owner_id'
+    t.integer 'status', default: 0
+    t.float 'progress', default: 0.0
+    t.datetime 'created_at', precision: 6, null: false
+    t.datetime 'updated_at', precision: 6, null: false
+    t.index ['name'], name: 'index_projects_on_name', unique: true
+    t.index ['owner_id'], name: 'index_projects_on_owner_id'
   end
-
 end
